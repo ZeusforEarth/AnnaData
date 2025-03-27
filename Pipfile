@@ -5,13 +5,13 @@ name = "pypi"
 
 [packages]
 pillow = "*"
-gunicorn = "*"
 whitenoise = "*"
 numpy = "*"
 gpt4all = "*"
 django = "*"
 django-tastypie = "*"
 tensorflow = "*"
+gunicorn = "*"
 
 [dev-packages]
 
