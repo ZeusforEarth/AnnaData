@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}<title>CropClinic - Upload</title>{% endblock %}
+
+{% block extra_css %}
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/imageout.css' %}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/ImageRecog" id="imageRecoLink" class="active">CropClinic</a></li>
+            <li><a href="/MixedFarming">PlantPartner</a></li>
+            <li><a href="/Crop">PlantPedia</a></li>
+            <li><a href="/AboutUs">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Background Image -->
+<div class="background">
+    <img src="{% static 'images/background/crop.jpg' %}" alt="Background Image" class="bg-image">
+</div>
+
+<!-- Upload Section -->
+<section class="hero upload-section">
+    <div class="hero-content">
+        <h1>Plant Disease Detection</h1>
+        <p>Upload an image of your plant to diagnose potential diseases or pests</p>
+    </div>
+
+    <div class="upload-container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="upload-box">
+                <div class="upload-area">
+                    <input type="file" name="image" id="image-upload" accept="image/*" required>
+                    <label for="image-upload" class="upload-label">
+                        <span class="upload-icon">+</span>
+                        <span class="upload-text">Click to upload plant image</span>
+                    </label>
+                </div>
+                <button type="submit" class="analyze-btn">Analyze Image</button>
+            </div>
+            {% if error %}
+                <div class="error-message">{{ error }}</div>
+            {% endif %}
+        </form>
+    </div>
+</section>
+{% endblock %}

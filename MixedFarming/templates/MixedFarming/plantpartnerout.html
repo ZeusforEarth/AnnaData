@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}<title>PlantPartner</title>{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/plantpartnerout.css' %}">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/ImageRecog"id="imageRecoLink">CropClinic</a></li>
+            <li><a href="/MixedFarming" class="active">PlantPartner</a></li>
+            <li><a href="/Crop">PlantPedia</a></li>
+            <li><a href="/AboutUs">About</a></li>
+            
+        </ul>
+    </nav>
+</header>
+<!-- Background Image -->
+<div class="background">
+    <img src="{% static "images/background/crop.jpg" %}" alt="Background Image" class="bg-image">
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="search" placeholder="🔍Search" onkeyup="searchJobs()">
+    <button id="search-btn">🔍</button>
+</div>
+
+<!-- Job Table -->
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                    <th>MAIN CROP</th>
+                    <th>INTER CROP</th>
+                    <th>PATTERN</th>
+                    <th colspan="2" rowspan="2">% LAND DISTRIBUTION</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="job-list">
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.primary_crop }}</td>
+                    <td>{{ result.get_companion_crops_list }}</td>
+                    <td> {% for pattern in result.patterns.all %}
+                        {{ pattern.name }}{% if not forloop.last %}, {% endif %}
+                    {% empty %}
+                        None
+                    {% endfor %}</td>
+                    <td>Main = {{result.main_crop_percentage}}</td>
+                    <td>Partner = {{result.companion_crop_percentage}}</td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>
+ {% endblock %}
+{% block extra_js %}
+<script src='{% static "js/plantpartnerint.js" %}'></script>
+{% endblock %}
+    
+    

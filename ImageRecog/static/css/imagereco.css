@@ -1,0 +1,156 @@
+/* Reset styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+/* Full-screen background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("crop.jpg") no-repeat center center/cover;
+    filter: blur(2px); /* Increased blur for better effect */
+    z-index: -1;
+    margin-top: 40px;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background image styling */
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px); /* Slight blur effect */
+    position: absolute;
+    z-index: -1;
+}
+/* Navigation Bar */
+header {
+    background-color: white;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+nav ul li a.active {
+    background-color:#330066;;
+    color: white;
+    border-radius: 10px;
+}
+
+
+/* Search bar */
+.search input {
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: left;
+    color: white;
+    padding: 50px;
+    background: url('https://source.unsplash.com/1600x900/?galaxy,abstract') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 40%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+/* Upload Container */
+.upload-container {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
+    align-items: center;
+}
+
+.file-upload-box {
+    border: 2px dashed gray;
+    padding: 20px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.upload-area {
+    display: block;
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 24px;
+    display: block;
+}
+
+.file-format {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Upload Buttons */
+.upload-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.upload-btn {
+    background: #330066;;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

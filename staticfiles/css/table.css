@@ -1,0 +1,45 @@
+
+
+/* Main Content */
+.content {
+    background: #330066;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Table Styling */
+.table-container {
+    margin: 40px auto;
+    width: 30%;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ddd;
+}
+
+/* Making the table responsive */
+@media (max-width: 768px) {
+    .table-container {
+        width: 100%;
+    }
+    .rectangle {
+        flex-wrap: wrap;
+    }
+}

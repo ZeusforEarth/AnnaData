@@ -1,0 +1,56 @@
+
+/* Upload Container */
+.upload-container {
+    background: white;
+    padding: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: black;
+   
+}
+
+.file-upload-box {
+    border: 2px dashed gray;
+    padding: 20px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.upload-area {
+    display: block;
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 24px;
+    display: block;
+}
+
+.file-format {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Upload Buttons */
+.upload-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.upload-btn {
+    background: #330066;;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

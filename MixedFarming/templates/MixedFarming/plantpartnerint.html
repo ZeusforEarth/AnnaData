@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}<title>PlantPartner</title>{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/plantpartnerint.css' %}">
+{% endblock %}
+
+{% block content %}
+<body>
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" >Home</a></li>
+                <li><a href="/ImageRecog"id="imageRecoLink">CropClinic</a></li>
+                <li><a href="/MixedFarming" class="active">PlantPartner</a></li>
+                <li><a href="/Crop">PlantPedia</a></li>
+                <li><a href="/AboutUs">About</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+                
+                <!-- Background Image -->
+ <div class="background">
+ <img src="{% static "images/background/crop.jpg" %}" alt="Background Image" class="bg-image"></div>
+                    
+                    <!-- Main Content -->
+<main>
+
+<div class="content">
+    <h1>Plant Partner</h1>
+            <div class="search-container">
+        <input type="text" id="search" placeholder="🔍 Search" onkeyup="searchJobs()">
+        <button id="search-btn">🔍</button>
+         </div>
+     </div>
+
+</main>
+
+{% endblock %}
+{% block extra_js %}
+<script src='{% static "js/plantpartnerint.js" %}'></script>
+{% endblock %}
+                                    
+
+                                    

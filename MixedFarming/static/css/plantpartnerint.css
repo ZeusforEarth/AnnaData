@@ -1,0 +1,95 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full-screen background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url("crop.jpg") no-repeat center center/cover;
+    filter: blur(2px); /* Increased blur for better effect */
+    z-index: -1;
+    margin-top: 40px;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background image styling */
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px); /* Slight blur effect */
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+
+
+/* Search Bar */
+.search input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Centered Content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px transparent;
+    background:transparent;
+}
+
+.content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    background:transparent;
+}
+
+/* Search Bar in Center */
+.search-container {
+    margin-top: 20px;
+}
+
+.search-container input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+.search-container button {
+    border: none;
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+}

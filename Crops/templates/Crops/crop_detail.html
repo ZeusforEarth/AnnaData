@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}<title>Plant Pedia</title>{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'crops/css/crop_detail.css' %}">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/ImageRecog"id="imageRecoLink">CropClinic</a></li>
+            <li><a href="/MixedFarming">PlantPartner</a></li>
+            <li><a href="/Crop" class="active">PlantPedia</a></li>
+            <li><a href="/AboutUs">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    <section class="content-section">
+        <div class="image-container">
+            <img src="{{crop.image.url}}" alt="Cotton">
+        </div>
+        <div class="text-container">
+            <h2 class="title">Name</h2>
+            <p class="description">
+                {{crop.name}}
+            </p>
+            <h2 class="title">Soil</h2>
+            <p class="description">
+                {{crop.Soil}}</p>
+            <h2 class="title">Nutrition</h2>
+            <p class="description">
+                {{crop.nutrition}}
+            </p>
+            <h2 class="title">Fertilizer</h2>
+            <p class="description">
+            {{crop.fertilizer}}</p>
+            <h2 class="title">MSP</h2>
+            <p class="description">
+                {{crop.MSP}}</p>
+                        
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
+{% block app_js %}
+    <script src="{% static 'crops/js/crop_detail.js' %}"></script>
+{% endblock %}
+
+

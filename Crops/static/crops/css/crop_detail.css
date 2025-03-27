@@ -1,0 +1,50 @@
+/* Section Layout */
+.content-section {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    gap: 40px;
+}
+
+/* Image Styling */
+.image-container img {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+
+/* Text Content */
+.text-container {
+    max-width: 500px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.learn-more {
+    background-color: #330066;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #330066;
+}

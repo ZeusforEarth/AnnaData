@@ -1,0 +1,160 @@
+/* Global Styling */
+
+/* Navigation Bar */
+header {
+    background: white;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.nav-links .active {
+    background: #330066;
+    color: white;
+    border-radius: 8px;
+}
+
+.bg-container {
+    /* Background image setup */
+    background-image: url('/static/images/PestSlider.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Create space for content */
+    min-height: 400px;
+    width: 100%;
+    
+    /* Positioning context for content */
+    position: relative;
+    
+    /* Optional styling */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.content {
+    /* Position content over the background */
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    
+    /* Styling for readability */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Climate Change Info */
+.climate-info {
+    background: #330066;
+    color: white;
+    text-align: center;
+    
+    font-size: 25px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+
+    /* Add these properties to center content vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Add minimum height to ensure there's space for centering */
+    min-height: 100px; /* Adjust this value based on your needs */
+    
+}
+.carousel-item img {
+    width: 100%;
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* This maintains aspect ratio while filling the container */
+    object-position: center; /* Centers the image within the container */
+}
+/* Key Features */
+.features {
+    text-align: center;
+    margin: 40px;
+}
+
+.features h2 {
+    font-size: 24px;
+}
+
+.feature-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.feature-btn {
+    background: #330066;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.feature-btn.light {
+    background: #eaeaea;
+    color: black;
+}
+
+
+
+/* Blog Section */
+.blog-section {
+    text-align: center;
+    margin: 40px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-card img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
